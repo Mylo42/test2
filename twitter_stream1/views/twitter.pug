@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    //- h1= `${title} - ${keyword}`
+    h1= title
+    each i in data
+        div.tweets
+            div.first_line
+                a(href="/twitter/stream?q=" + i.query class='info1' target='_blank')
+                    p.name=i.name
